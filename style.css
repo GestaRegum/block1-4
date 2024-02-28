@@ -1,0 +1,185 @@
+body, main {
+	display: grid;
+	font-family: 'Montserrat', sans-serif;
+	background-color: rgb(255, 255, 255);
+    row-gap: 30px;
+}
+
+header {
+	display: grid;
+	margin-top: 30px;
+}
+
+.title {
+	font-weight: 700;
+	font-size: 18px;
+	color: rgb(42, 35, 103);
+}
+
+span {
+	color: rgb(107, 90, 249);
+}
+
+li {
+	list-style: none;
+    margin-bottom: 10px
+}
+
+.item {
+	padding-left: 15px;
+	display: inline-block;
+	width: 340px;
+	height: 200px;
+	border-radius: 10px;
+	gap: 10px;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+	align-content: center;
+}
+
+.number {
+	display: grid;
+	font-size: 64px;
+	font-weight: 800;
+	line-height: 78px;
+	color: white;
+	text-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.under-line {
+	border-bottom: 2px solid rgb(227, 117, 117);
+	width: 175px;
+}
+
+.slide-name {
+	display: grid;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 17px;
+	color: rgb(42, 35, 103);
+}
+
+.slide-text {
+	display: grid;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 15px;
+}
+
+.slide-number {
+	display: grid;
+	grid-template-columns: 12px 12px 12px 12px 12px 12px;
+	column-gap: 12px;
+}
+
+
+
+footer {
+    display: grid;
+    justify-content: space-around;
+}
+
+.price a {
+		color: white;
+		text-decoration: none;
+		font-size: 12px;
+		font-weight: 800;
+		line-height: 15px;
+	}
+
+	.price {
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		width: 275px;
+		height: 60px;
+		background-color: rgb(107, 90, 249);
+		border-radius: 5px;
+	}
+
+    .open{
+    display: grid;
+    justify-content: space-around;
+    }
+
+    .rotate {
+    transform: rotate(180deg);
+    }
+
+    .hideItem {
+        display: none;
+}
+
+/* Телефон*/
+@media (max-width: 768px) {
+
+	body {
+		justify-items: center;
+		gap: 30px;
+	}
+
+	.ring {
+		display: grid;
+		width: 12px;
+		height: 12px;
+		border: 0;
+		background-color: rgb(221, 221, 221);
+		border-radius: 50%;
+	}
+
+	.ring:focus {
+		background-color: rgb(181, 182, 188);
+	}
+
+	footer {
+		display: grid;
+	}
+
+    }
+
+/*Планшет*/
+
+@media (min-width: 769px) and (max-width: 1279px) {
+    
+    .title {
+        font-weight: 800;
+        font-size: 24px;
+    }
+
+
+	main{
+        grid-template-columns: 50% 50%;
+        row-gap: 20px;
+    }
+
+
+
+
+
+    .slide-number {
+		display: none;
+	}
+}
+
+
+/*Компьютер*/
+
+@media  (min-width: 1280px) {
+
+    body {
+        justify-content: center;
+    }
+    
+
+    main{
+        grid-template-columns: 33% 33% 33%;
+        row-gap: 20px;
+        column-gap: 20px;
+    }
+
+    .title {
+        font-weight: 800;
+        font-size: 36px;
+     
+    }
+
+}
