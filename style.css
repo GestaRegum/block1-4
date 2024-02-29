@@ -27,7 +27,6 @@ li {
 
 .item {
 	padding-left: 15px;
-	display: inline-block;
 	width: 340px;
 	height: 200px;
 	border-radius: 10px;
@@ -102,13 +101,11 @@ footer {
     }
 
     .rotate {
-    transform: rotate(180deg);
+		transition-delay: 0.5s;
+    	transform: rotate(180deg) ;
     }
 
-    .hideItem {
-        display: none;
-}
-
+ 
 /* Телефон*/
 @media (max-width: 768px) {
 
@@ -133,6 +130,9 @@ footer {
 	footer {
 		display: grid;
 	}
+    .open{
+    display: none;
+    }
 
     }
 
@@ -140,6 +140,10 @@ footer {
 
 @media (min-width: 769px) and (max-width: 1279px) {
     
+	.hideItemLT:nth-child(n+3) {
+	    display: none;
+	}
+
     .title {
         font-weight: 800;
         font-size: 24px;
@@ -150,10 +154,6 @@ footer {
         grid-template-columns: 50% 50%;
         row-gap: 20px;
     }
-
-
-
-
 
     .slide-number {
 		display: none;
@@ -169,7 +169,9 @@ footer {
         justify-content: center;
     }
     
-
+	.hideItemDT:nth-child(n+4) {
+		display: none;
+	}
     main{
         grid-template-columns: 33% 33% 33%;
         row-gap: 20px;
