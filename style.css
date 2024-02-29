@@ -101,7 +101,7 @@ footer {
     }
 
     .rotate {
-		transition-delay: 0.5s;
+	transition-delay: 0.3s;
     	transform: rotate(180deg) ;
     }
 
