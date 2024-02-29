@@ -3,6 +3,7 @@ body, main {
 	font-family: 'Montserrat', sans-serif;
 	background-color: rgb(255, 255, 255);
     row-gap: 30px;
+	column-gap: 30px;
 }
 
 header {
@@ -26,6 +27,8 @@ li {
 }
 
 .item {
+	opacity: 1;
+	transition: opacity 5s;
 	padding-left: 15px;
 	width: 340px;
 	height: 200px;
@@ -95,19 +98,28 @@ footer {
 		border-radius: 5px;
 	}
 
+	.openClose {
+	display: grid;
+	justify-content: center
+	}
+	
     .open{
     display: grid;
     justify-content: space-around;
     }
 
-    .rotate {
-	transition-delay: 0.3s;
-    	transform: rotate(180deg) ;
-    }
+	.rotate {
+        transform: rotate(180deg); 
+	   }
+	
+    
 
  
 /* Телефон*/
 @media (max-width: 768px) {
+	.noMobile {
+	display: none;
+	}
 
 	body {
 		justify-items: center;
@@ -141,7 +153,14 @@ footer {
 @media (min-width: 769px) and (max-width: 1279px) {
     
 	.hideItemLT:nth-child(n+3) {
-	    display: none;
+	margin: -10px;	
+	overflow: hidden;
+	opacity: 0;
+	transition: opacity 2s;
+	height: 0;
+	transition-property: opacity, height, margin ;
+	transition-duration: 0.5s ;
+	transition-delay: 0.5s;
 	}
 
     .title {
@@ -149,13 +168,17 @@ footer {
         font-size: 24px;
     }
 
+	body {
+	   	justify-content: space-around;
+	}
 
 	main{
         grid-template-columns: 50% 50%;
         row-gap: 20px;
+		
     }
 
-    .slide-number {
+    .slide-number, .swiper-container {
 		display: none;
 	}
 }
@@ -170,7 +193,14 @@ footer {
     }
     
 	.hideItemDT:nth-child(n+4) {
-		display: none;
+	margin: -10px;	
+	overflow: hidden;
+	opacity: 0;
+	transition: opacity 2s;
+	height: 0;
+	transition-property: opacity, height, margin ;
+	transition-duration: 0.5s ;
+	transition-delay: 0.5s;
 	}
     main{
         grid-template-columns: 33% 33% 33%;
@@ -183,5 +213,5 @@ footer {
         font-size: 36px;
      
     }
-
+	
 }
