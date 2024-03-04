@@ -1,4 +1,4 @@
-body, main {
+body, main{
 	display: grid;
 	font-family: 'Montserrat', sans-serif;
 	background-color: rgb(255, 255, 255);
@@ -121,27 +121,15 @@ footer {
 	display: none;
 	}
 
+	.swiper {
+  width: 390px;
+  height: 250px;
+}
+
 	body {
 		justify-items: center;
-		gap: 30px;
-	}
-
-	.ring {
-		display: grid;
-		width: 12px;
-		height: 12px;
-		border: 0;
-		background-color: rgb(221, 221, 221);
-		border-radius: 50%;
-	}
-
-	.ring:focus {
-		background-color: rgb(181, 182, 188);
-	}
-
-	footer {
-		display: grid;
-	}
+		}
+	
     .open{
     display: none;
     }
@@ -152,6 +140,10 @@ footer {
 
 @media (min-width: 769px) and (max-width: 1279px) {
     
+	.swiper{
+	display: none;}
+
+
 	.hideItemLT:nth-child(n+3) {
 	margin: -10px;	
 	overflow: hidden;
@@ -177,16 +169,16 @@ footer {
         row-gap: 20px;
 		
     }
-
-    .slide-number, .swiper-container {
-		display: none;
-	}
 }
 
 
 /*Компьютер*/
 
 @media  (min-width: 1280px) {
+
+	
+	.swiper{
+	display: none;}
 
     body {
         justify-content: center;

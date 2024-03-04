@@ -1,3 +1,10 @@
+new Swiper('.swiper',{ 
+
+    pagination: {
+        el: '.swiper-pagination',
+      }
+      });
+      
 let items = document.querySelectorAll('.item');
 let open = document.querySelector('.open');
 
