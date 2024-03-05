@@ -1,15 +1,16 @@
 new Swiper('.swiper',{ 
 
-    pagination: {
+        pagination: {
         el: '.swiper-pagination',
-      }
-      });
-      
+        }
+        });
+   
+
+
+
+
 let items = document.querySelectorAll('.item');
 let open = document.querySelector('.open');
-
-
-
 
 open.addEventListener('click', function(evn) {
     evn.preventDefault();
@@ -23,4 +24,20 @@ open.addEventListener('click', function(evn) {
         open.classList.toggle('rotate');
 
 });
+
+
+
+    
+  
+
+  
+
+
+
+
+
+
+
+      
+
 
